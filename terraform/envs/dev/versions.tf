@@ -1,3 +1,4 @@
+# Terraform and provider version requirements
 terraform {
   required_version = ">= 1.10.0, < 2.0.0"
 
