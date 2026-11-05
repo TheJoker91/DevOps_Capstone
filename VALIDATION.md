@@ -11,10 +11,10 @@
 
 ## Docker
 
-- [ ] multi-stage Dockerfile is implemented.
-- [ ] runtime image is minimized.
-- [ ] container runs as non-root.
-- [ ] application responds on port 3000.
+- [x] multi-stage Dockerfile is implemented.
+- [x] runtime image is minimized.
+- [x] container runs as non-root.
+- [x] application responds on port 3000.
 - [ ] image is tagged immutably.
 
 ## Terraform / AWS
