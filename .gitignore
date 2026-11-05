@@ -8,7 +8,7 @@ app/dist/
 *.tfstate
 *.tfstate.*
 *.tfplan
-.terraform.lock.hcl
+
 
 .idea/
 .vscode/
