@@ -2,12 +2,12 @@
 
 ## Node.js / TypeScript
 
-- [ ] `npm ci` succeeds.
-- [ ] lint/type checking succeeds.
-- [ ] tests pass.
-- [ ] TypeScript build creates `dist/`.
-- [ ] compiled application starts successfully.
-- [ ] health endpoint works.
+- [x] `npm ci` succeeds.
+- [x] lint/type checking succeeds.
+- [x] tests pass.
+- [x] TypeScript build creates `dist/`.
+- [x] compiled application starts successfully.
+- [x] health endpoint works.
 
 ## Docker
 
