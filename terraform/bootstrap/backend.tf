@@ -1,3 +1,4 @@
+# Remote state backend
 terraform {
   backend "s3" {
     bucket       = "devops-capstone-tfstate-686831565701"
