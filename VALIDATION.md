@@ -19,8 +19,8 @@
 
 ## Terraform / AWS
 
-- [ ] remote state is used.
-- [ ] VPC spans multiple AZs.
+- [x] remote state is used.
+- [x] VPC spans multiple AZs.
 - [ ] EKS nodes are private.
 - [ ] ECR is configured.
 - [ ] EKS nodes join successfully.
