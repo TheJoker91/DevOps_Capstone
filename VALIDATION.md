@@ -15,14 +15,14 @@
 - [x] runtime image is minimized.
 - [x] container runs as non-root.
 - [x] application responds on port 3000.
-- [ ] image is tagged immutably.
+- [x] image is tagged immutably.
 
 ## Terraform / AWS
 
 - [x] remote state is used.
 - [x] VPC spans multiple AZs.
 - [ ] EKS nodes are private.
-- [ ] ECR is configured.
+- [x] ECR is configured.
 - [ ] EKS nodes join successfully.
 - [ ] GitHub AWS authentication uses OIDC.
 - [ ] trust policy is repository/environment restricted.
