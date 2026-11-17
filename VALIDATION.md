@@ -24,8 +24,8 @@
 - [x] EKS nodes are private.
 - [x] ECR is configured.
 - [x] EKS nodes join successfully.
-- [ ] GitHub AWS authentication uses OIDC.
-- [ ] trust policy is repository/environment restricted.
+- [x] GitHub AWS authentication uses OIDC.
+- [x] trust policy is repository/environment restricted.
 - [ ] workload AWS permissions do not use static keys.
 - [ ] Terraform plan is reviewed before apply.
 
