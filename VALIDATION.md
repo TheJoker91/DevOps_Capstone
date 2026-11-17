@@ -21,9 +21,9 @@
 
 - [x] remote state is used.
 - [x] VPC spans multiple AZs.
-- [ ] EKS nodes are private.
+- [x] EKS nodes are private.
 - [x] ECR is configured.
-- [ ] EKS nodes join successfully.
+- [x] EKS nodes join successfully.
 - [ ] GitHub AWS authentication uses OIDC.
 - [ ] trust policy is repository/environment restricted.
 - [ ] workload AWS permissions do not use static keys.
