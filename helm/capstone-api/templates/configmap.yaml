@@ -1,0 +1,11 @@
+{{/* Application settings exposed to the pods as environment variables */}}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "capstone-api.fullname" . }}
+  labels:
+    {{- include "capstone-api.labels" . | nindent 4 }}
+data:
+  APP_ENV: {{ .Values.app.environment | quote }}
+  APP_VERSION: {{ .Values.image.tag | quote }}
+  PORT: {{ .Values.app.port | quote }}

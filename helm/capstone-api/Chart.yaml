@@ -1,0 +1,7 @@
+# Chart metadata
+apiVersion: v2
+name: capstone-api
+description: Helm chart for the capstone Node.js API
+type: application
+version: 0.1.0
+appVersion: "1.0.0"
