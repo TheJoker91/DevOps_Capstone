@@ -1,0 +1,90 @@
+# Number of pods when autoscaling is disabled
+replicaCount: 2
+
+# Container image
+image:
+  repository: 686831565701.dkr.ecr.us-east-1.amazonaws.com/devops-capstone-api
+  tag: ""
+  pullPolicy: IfNotPresent
+
+# Application settings passed as environment variables
+app:
+  environment: local
+  port: 3000
+
+# Pod identity inside the cluster
+serviceAccount:
+  create: true
+  name: ""
+  automountToken: false
+
+# Pod-level security settings
+podSecurityContext:
+  runAsNonRoot: true
+  runAsUser: 1000
+  runAsGroup: 1000
+  seccompProfile:
+    type: RuntimeDefault
+
+# Container-level security settings
+containerSecurityContext:
+  allowPrivilegeEscalation: false
+  readOnlyRootFilesystem: true
+  capabilities:
+    drop:
+      - ALL
+
+# CPU and memory requests and limits
+resources:
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    cpu: 500m
+    memory: 256Mi
+
+# Readiness probe
+readinessProbe:
+  path: /ready
+  initialDelaySeconds: 5
+  periodSeconds: 10
+  failureThreshold: 3
+
+# Liveness probe
+livenessProbe:
+  path: /health
+  initialDelaySeconds: 10
+  periodSeconds: 20
+  failureThreshold: 3
+
+# Time allowed for graceful shutdown
+terminationGracePeriodSeconds: 30
+
+# Service
+service:
+  type: ClusterIP
+  port: 80
+
+# Horizontal pod autoscaler
+autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 5
+  targetCPUUtilizationPercentage: 70
+
+# Pod disruption budget
+podDisruptionBudget:
+  enabled: true
+  minAvailable: 1
+
+# Spread pods across availability zones and nodes
+topologySpread:
+  enabled: true
+  maxSkew: 1
+
+# Ingress (disabled until the AWS Load Balancer Controller is installed)
+ingress:
+  enabled: false
+  className: alb
+  host: ""
+  annotations: {}

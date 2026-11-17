@@ -31,7 +31,7 @@
 
 ## Kubernetes / Helm
 
-- [ ] Helm lint succeeds.
+- [x] Helm lint succeeds.
 - [ ] multiple replicas run.
 - [ ] requests and limits exist.
 - [ ] liveness works.

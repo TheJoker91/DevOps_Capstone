@@ -1,0 +1,31 @@
+{{/* External access through an AWS Application Load Balancer */}}
+{{- if .Values.ingress.enabled }}
+{{- $defaultAnnotations := dict
+  "alb.ingress.kubernetes.io/scheme" "internet-facing"
+  "alb.ingress.kubernetes.io/target-type" "ip"
+  "alb.ingress.kubernetes.io/healthcheck-path" .Values.readinessProbe.path
+}}
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ include "capstone-api.fullname" . }}
+  labels:
+    {{- include "capstone-api.labels" . | nindent 4 }}
+  annotations:
+    {{- toYaml (merge (deepCopy .Values.ingress.annotations) $defaultAnnotations) | nindent 4 }}
+spec:
+  ingressClassName: {{ .Values.ingress.className }}
+  rules:
+    - http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: {{ include "capstone-api.fullname" . }}
+                port:
+                  name: http
+      {{- with .Values.ingress.host }}
+      host: {{ . | quote }}
+      {{- end }}
+{{- end }}
