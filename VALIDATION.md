@@ -27,7 +27,7 @@
 - [x] GitHub AWS authentication uses OIDC.
 - [x] trust policy is repository/environment restricted.
 - [ ] workload AWS permissions do not use static keys.
-- [ ] Terraform plan is reviewed before apply.
+- [x] Terraform plan is reviewed before apply.
 
 ## Kubernetes / Helm
 
