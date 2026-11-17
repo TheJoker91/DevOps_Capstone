@@ -32,15 +32,15 @@
 ## Kubernetes / Helm
 
 - [x] Helm lint succeeds.
-- [ ] multiple replicas run.
-- [ ] requests and limits exist.
+- [x] multiple replicas run.
+- [x] requests and limits exist.
 - [ ] liveness works.
-- [ ] readiness works.
+- [x] readiness works.
 - [ ] HPA works.
-- [ ] PDB exists.
-- [ ] rolling update succeeds.
-- [ ] security context is configured.
-- [ ] workload is distributed appropriately for availability.
+- [x] PDB exists.
+- [x] rolling update succeeds.
+- [x] security context is configured.
+- [x] workload is distributed appropriately for availability.
 
 ## Networking
 
