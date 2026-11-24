@@ -16,7 +16,7 @@ resource "helm_release" "aws_load_balancer_controller" {
     }
   })]
 
-  depends_on = [module.lb_controller_role]
+  depends_on = [module.eks, module.lb_controller_role]
 }
 
 # Install Cluster Autoscaler
@@ -44,5 +44,9 @@ resource "helm_release" "cluster_autoscaler" {
     }
   })]
 
-  depends_on = [module.cluster_autoscaler_role]
+  depends_on = [
+    module.eks,
+    module.cluster_autoscaler_role,
+    helm_release.aws_load_balancer_controller,
+  ]
 }
