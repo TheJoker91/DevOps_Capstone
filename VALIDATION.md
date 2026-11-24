@@ -26,7 +26,7 @@
 - [x] EKS nodes join successfully.
 - [x] GitHub AWS authentication uses OIDC.
 - [x] trust policy is repository/environment restricted.
-- [ ] workload AWS permissions do not use static keys.
+- [x] workload AWS permissions do not use static keys.
 - [x] Terraform plan is reviewed before apply.
 
 ## Kubernetes / Helm
@@ -36,7 +36,7 @@
 - [x] requests and limits exist.
 - [ ] liveness works.
 - [x] readiness works.
-- [ ] HPA works.
+- [x] HPA works.
 - [x] PDB exists.
 - [x] rolling update succeeds.
 - [x] security context is configured.
@@ -45,7 +45,7 @@
 ## Networking
 
 - [ ] AWS Load Balancer Controller works.
-- [ ] ALB is created from Ingress.
+- [x] ALB is created from Ingress.
 - [ ] targets are healthy.
 - [ ] HTTPS works.
 - [ ] DNS works when configured.

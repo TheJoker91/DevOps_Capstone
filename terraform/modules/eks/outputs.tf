@@ -33,3 +33,9 @@ output "node_role_arn" {
   description = "ARN of the IAM role used by the worker nodes"
   value       = aws_iam_role.node.arn
 }
+
+# Cluster CA certificate
+output "cluster_certificate_authority_data" {
+  description = "Base64-encoded certificate authority data for the cluster"
+  value       = aws_eks_cluster.main.certificate_authority[0].data
+}
