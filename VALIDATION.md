@@ -68,12 +68,12 @@
 
 - [x] Argo CD is operational.
 - [x] dev desired state is stored in Git.
-- [ ] prod desired state is stored in Git.
+- [x] prod desired state is stored in Git.
 - [x] exact image version is declared.
 - [x] Argo CD syncs the application.
 - [x] drift can be detected.
 - [x] rollback procedure is demonstrated.
-- [ ] production promotion has a control/approval mechanism.
+- [x] production promotion has a control/approval mechanism.
 - [ ] GitHub Actions and Argo CD do not compete for deployment ownership.
 
 ## Observability
