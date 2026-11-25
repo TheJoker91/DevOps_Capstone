@@ -10,7 +10,7 @@ leftovers=0
 report() {
   local name="$1"
   local result="$2"
-  if [ -n "$result" ]; then
+  if [[ -n "$result" ]]; then
     echo "FAIL  ${name}: ${result}"
     leftovers=1
   else
@@ -59,7 +59,7 @@ vpcs=$(aws ec2 describe-vpcs --region "$REGION" \
 report "Project VPCs" "$vpcs"
 
 # Overall result
-if [ "$leftovers" -ne 0 ]; then
+if [[ "$leftovers" -ne 0 ]]; then
   echo "RESULT: billable resources are still running"
   exit 1
 fi
