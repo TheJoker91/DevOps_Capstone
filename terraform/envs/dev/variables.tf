@@ -98,3 +98,10 @@ variable "admin_cidrs" {
     error_message = "Each entry in admin_cidrs must be a valid CIDR, for example 203.0.113.10/32."
   }
 }
+
+# Git branch Argo CD deploys from
+variable "gitops_target_revision" {
+  description = "Git branch, tag or commit Argo CD syncs the dev application from"
+  type        = string
+  default     = "main"
+}
