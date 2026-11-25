@@ -1,0 +1,10 @@
+# Image deployed to prod
+image:
+  tag: "285af8c"
+
+# Application settings
+app:
+  environment: prod
+# Autoscaling limits
+autoscaling:
+  minReplicas: 3

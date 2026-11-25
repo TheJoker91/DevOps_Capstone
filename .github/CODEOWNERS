@@ -1,0 +1,5 @@
+# Production desired state requires approval from release owners
+/gitops/prod/ @TheJoker91
+
+# Infrastructure changes require approval from platform owners
+/terraform/ @TheJoker91
