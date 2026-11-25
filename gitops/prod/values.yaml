@@ -5,3 +5,6 @@ image:
 # Application settings
 app:
   environment: prod
+# Autoscaling limits
+autoscaling:
+  minReplicas: 3
