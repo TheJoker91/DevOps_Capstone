@@ -1,0 +1,7 @@
+# Image deployed to prod
+image:
+  tag: "285af8c"
+
+# Application settings
+app:
+  environment: prod
