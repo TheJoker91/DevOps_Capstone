@@ -72,7 +72,7 @@ resource "helm_release" "argocd" {
   depends_on = [module.eks, helm_release.aws_load_balancer_controller]
 }
 
-# Register dev application with Argo CD
+# Register dev and prod applications with Argo CD
 resource "helm_release" "argocd_apps" {
   name       = "argocd-apps"
   repository = "https://argoproj.github.io/argo-helm"
@@ -104,6 +104,27 @@ resource "helm_release" "argocd_apps" {
             prune    = true
             selfHeal = true
           }
+          syncOptions = ["CreateNamespace=true"]
+        }
+      }
+      "capstone-api-prod" = {
+        namespace  = "argocd"
+        project    = "default"
+        finalizers = ["resources-finalizer.argocd.argoproj.io"]
+        source = {
+          repoURL        = "https://github.com/TheJoker91/DevOps_Capstone.git"
+          targetRevision = var.gitops_target_revision
+          path           = "helm/capstone-api"
+          helm = {
+            releaseName = "capstone-api"
+            valueFiles  = ["../../gitops/prod/values.yaml"]
+          }
+        }
+        destination = {
+          server    = "https://kubernetes.default.svc"
+          namespace = "capstone-prod"
+        }
+        syncPolicy = {
           syncOptions = ["CreateNamespace=true"]
         }
       }

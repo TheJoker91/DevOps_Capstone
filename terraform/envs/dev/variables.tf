@@ -101,7 +101,7 @@ variable "admin_cidrs" {
 
 # Git branch Argo CD deploys from
 variable "gitops_target_revision" {
-  description = "Git branch, tag or commit Argo CD syncs the dev application from"
+  description = "Git branch, tag or commit Argo CD syncs the applications from"
   type        = string
   default     = "main"
 }
