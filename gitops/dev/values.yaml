@@ -5,8 +5,3 @@ image:
 # Application settings
 app:
   environment: dev
-
-
-# Autoscaling limits
-autoscaling:
-  minReplicas: 3
